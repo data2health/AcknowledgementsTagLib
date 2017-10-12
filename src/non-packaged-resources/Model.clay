@@ -1,0 +1,1554 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clay-model clay-version="1.4.2">
+<database-model alias="" author="" begin-script="" end-script="" name="myModel3" remarks="" sql-dialect-id="jp.azzurri.clay.dialect.Postgre_7_3_Dialect" uid="34dcf4d9:12c7933ea8c:-7fe2" version="1.0">
+<database-model-description/>
+<schema-list>
+<schema alias="" name="pubmed_central_ack_stanford" remarks="" uid="34dcf4d9:12c7933ea8c:-7fdf">
+<schema-description/>
+<domain-list/>
+<table-list>
+<table alias="" name="award" remarks="" uid="2c333360:15ef2aaa28f:-7ffe">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="44" y="93"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7f6d">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="award" remarks="" uid="2c333360:15ef2aaa28f:-7f6c">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_AWARD" remarks="" uid="2c333360:15ef2aaa28f:-7ffd">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="clinical_trial" remarks="" uid="2c333360:15ef2aaa28f:-7ff8">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="1131" y="559"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7dd5">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="prefix" remarks="" uid="2c333360:15ef2aaa28f:-7dd4">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7dd3">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_CLINICAL_TRIAL" remarks="" uid="2c333360:15ef2aaa28f:-7ff7">
+<primary-key-description/>
+<primary-key-column name="pmcid"/>
+<primary-key-column name="prefix"/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="discipline" remarks="" uid="2c333360:15ef2aaa28f:-7ff6">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="436" y="487"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7d64">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="discipline" remarks="" uid="2c333360:15ef2aaa28f:-7d63">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_DISCIPLINE" remarks="" uid="2c333360:15ef2aaa28f:-7ff4">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="collaborant" remarks="" uid="2c333360:15ef2aaa28f:-7ff3">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="342" y="-29"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7e32">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="organization_id" remarks="" uid="2c333360:15ef2aaa28f:-7e78">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="collaboration_id" remarks="" uid="2c333360:15ef2aaa28f:-7e3e">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_COLLABORANT" remarks="" uid="2c333360:15ef2aaa28f:-7ff1">
+<primary-key-description/>
+<primary-key-column name="pmcid"/>
+<primary-key-column name="organization_id"/>
+<primary-key-column name="collaboration_id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_collaborant_1" on-delete="" on-update="" referenced-key="PK_ORGANIZATION" referenced-table="organization" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7e79">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="organization_id" referenced-key-column-name="id"/>
+</foreign-key>
+<foreign-key alias="" name="FK_collaborant_2" on-delete="" on-update="" referenced-key="PK_COLLABORATION" referenced-table="collaboration" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7e3f">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="collaboration_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="disease" remarks="" uid="2c333360:15ef2aaa28f:-7ff0">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="578" y="72"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7d6a">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="disease" remarks="" uid="2c333360:15ef2aaa28f:-7d69">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="umls_id" remarks="" uid="2c333360:15ef2aaa28f:-7d68">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="umls_match_string" remarks="" uid="2c333360:15ef2aaa28f:-7d67">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_DISEASE" remarks="" uid="2c333360:15ef2aaa28f:-7fee">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="collaborator" remarks="" uid="2c333360:15ef2aaa28f:-7fed">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="270" y="261"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7dda">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="collaboration_id" remarks="" uid="2c333360:15ef2aaa28f:-7e12">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="person_id" remarks="" uid="2c333360:15ef2aaa28f:-7de3">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_COLLABORATOR" remarks="" uid="2c333360:15ef2aaa28f:-7feb">
+<primary-key-description/>
+<primary-key-column name="pmcid"/>
+<primary-key-column name="collaboration_id"/>
+<primary-key-column name="person_id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_collaborator_1" on-delete="" on-update="" referenced-key="PK_COLLABORATION" referenced-table="collaboration" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7e13">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="collaboration_id" referenced-key-column-name="id"/>
+</foreign-key>
+<foreign-key alias="" name="FK_collaborator_2" on-delete="" on-update="" referenced-key="PK_PERSON" referenced-table="person" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7de4">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="person_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="collaboration" remarks="" uid="2c333360:15ef2aaa28f:-7fea">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="160" y="136"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7eb0">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="collaboration" remarks="" uid="2c333360:15ef2aaa28f:-7eaf">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_COLLABORATION" remarks="" uid="2c333360:15ef2aaa28f:-7fe8">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="event" remarks="" uid="2c333360:15ef2aaa28f:-7fe7">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="107" y="492"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7d60">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="event" remarks="" uid="2c333360:15ef2aaa28f:-7d5f">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_EVENT" remarks="" uid="2c333360:15ef2aaa28f:-7fe5">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="funding_agency" remarks="" uid="2c333360:15ef2aaa28f:-7fe4">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="554" y="491"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7dca">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="funding_agency" remarks="" uid="2c333360:15ef2aaa28f:-7dc9">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_FUNDING_AGENCY" remarks="" uid="2c333360:15ef2aaa28f:-7fe2">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="funder" remarks="" uid="2c333360:15ef2aaa28f:-7fe1">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="168" y="2"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7d6f">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="organization_id" remarks="" uid="2c333360:15ef2aaa28f:-7da8">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="award_id" remarks="" uid="2c333360:15ef2aaa28f:-7d7c">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_FUNDER" remarks="" uid="2c333360:15ef2aaa28f:-7fdf">
+<primary-key-description/>
+<primary-key-column name="pmcid"/>
+<primary-key-column name="organization_id"/>
+<primary-key-column name="award_id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_funder_1" on-delete="" on-update="" referenced-key="PK_ORGANIZATION" referenced-table="organization" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7da9">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="organization_id" referenced-key-column-name="id"/>
+</foreign-key>
+<foreign-key alias="" name="FK_funder_2" on-delete="" on-update="" referenced-key="PK_AWARD" referenced-table="award" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7d7d">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="award_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="awardee" remarks="" uid="2c333360:15ef2aaa28f:-7fde">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="22" y="312"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7eb5">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="award_id" remarks="" uid="2c333360:15ef2aaa28f:-7f0c">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="person_id" remarks="" uid="2c333360:15ef2aaa28f:-7ebe">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_AWARDEE" remarks="" uid="2c333360:15ef2aaa28f:-7fdc">
+<primary-key-description/>
+<primary-key-column name="pmcid"/>
+<primary-key-column name="award_id"/>
+<primary-key-column name="person_id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_awardee_1" on-delete="" on-update="" referenced-key="PK_AWARD" referenced-table="award" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7f0d">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="award_id" referenced-key-column-name="id"/>
+</foreign-key>
+<foreign-key alias="" name="FK_awardee_2" on-delete="" on-update="" referenced-key="PK_PERSON" referenced-table="person" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7ebf">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="person_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="location" remarks="" uid="2c333360:15ef2aaa28f:-7fbc">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="941" y="0"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7dd0">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="location" remarks="" uid="2c333360:15ef2aaa28f:-7dcf">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="geonames_id" remarks="" uid="2c333360:15ef2aaa28f:-7dce">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="geonames_match_string" remarks="" uid="2c333360:15ef2aaa28f:-7dcd">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_LOCATION" remarks="" uid="2c333360:15ef2aaa28f:-7fba">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="publication_component" remarks="" uid="2c333360:15ef2aaa28f:-7fb9">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="226" y="496"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7d5c">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="publication_component" remarks="" uid="2c333360:15ef2aaa28f:-7d5b">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_PUBLICATION_COMPONENT" remarks="" uid="2c333360:15ef2aaa28f:-7fb7">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="provider" remarks="" uid="2c333360:15ef2aaa28f:-7fb6">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="720" y="220"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7c8d">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="person_id" remarks="" uid="2c333360:15ef2aaa28f:-7d1b">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="resource_id" remarks="" uid="2c333360:15ef2aaa28f:-7c98">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_PROVIDER" remarks="" uid="2c333360:15ef2aaa28f:-7fb4">
+<primary-key-description/>
+<primary-key-column name="pmcid"/>
+<primary-key-column name="person_id"/>
+<primary-key-column name="resource_id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_provider_1" on-delete="" on-update="" referenced-key="PK_PERSON" referenced-table="person" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7d1c">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="person_id" referenced-key-column-name="id"/>
+</foreign-key>
+<foreign-key alias="" name="FK_provider_2" on-delete="" on-update="" referenced-key="PK_RESOURCE" referenced-table="resource" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7c99">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="resource_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="project" remarks="" uid="2c333360:15ef2aaa28f:-7fb3">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="721" y="490"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7d52">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="project" remarks="" uid="2c333360:15ef2aaa28f:-7d51">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_PROJECT" remarks="" uid="2c333360:15ef2aaa28f:-7fb1">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="person" remarks="" uid="2c333360:15ef2aaa28f:-7fb0">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="257" y="351"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7f69">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="first_name" remarks="" uid="2c333360:15ef2aaa28f:-7f66">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="middle_name" remarks="" uid="2c333360:15ef2aaa28f:-7f63">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="last_name" remarks="" uid="2c333360:15ef2aaa28f:-7f62">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="title" remarks="" uid="2c333360:15ef2aaa28f:-7f61">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="appendix" remarks="" uid="2c333360:15ef2aaa28f:-7f60">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_PERSON" remarks="" uid="2c333360:15ef2aaa28f:-7fae">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="organization" remarks="" uid="2c333360:15ef2aaa28f:-7fad">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="371" y="135"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7eaa">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="organization" remarks="" uid="2c333360:15ef2aaa28f:-7ea9">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="grid_id" remarks="" uid="2c333360:15ef2aaa28f:-7bf6">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="grid_match_string" remarks="" uid="2c333360:15ef2aaa28f:-7bf5">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="geonames_id" remarks="" uid="2c333360:15ef2aaa28f:-7bf4">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="geonames_match_string" remarks="" uid="2c333360:15ef2aaa28f:-7bf3">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_ORGANIZATION" remarks="" uid="2c333360:15ef2aaa28f:-7fab">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="organism" remarks="" uid="2c333360:15ef2aaa28f:-7faa">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="832" y="426"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7c8a">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="organism" remarks="" uid="2c333360:15ef2aaa28f:-7c89">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="umls_id" remarks="" uid="2c333360:15ef2aaa28f:-7c88">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="umls_match_string" remarks="" uid="2c333360:15ef2aaa28f:-7c87">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_ORGANISM" remarks="" uid="2c333360:15ef2aaa28f:-7fa8">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="organic_chemical" remarks="" uid="2c333360:15ef2aaa28f:-7fa7">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="724" y="84"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7d58">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="organic_chemical" remarks="" uid="2c333360:15ef2aaa28f:-7d57">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="umls_id" remarks="" uid="2c333360:15ef2aaa28f:-7d56">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="umls_match_string" remarks="" uid="2c333360:15ef2aaa28f:-7d55">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_ORGANIC_CHEMICAL" remarks="" uid="2c333360:15ef2aaa28f:-7fa5">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="technique" remarks="" uid="2c333360:15ef2aaa28f:-7f83">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="944" y="334"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7bfc">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="technique" remarks="" uid="2c333360:15ef2aaa28f:-7bfb">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="umls_id" remarks="" uid="2c333360:15ef2aaa28f:-7bfa">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="umls_match_string" remarks="" uid="2c333360:15ef2aaa28f:-7bf9">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_TECHNIQUE" remarks="" uid="2c333360:15ef2aaa28f:-7f81">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="supporter" remarks="" uid="2c333360:15ef2aaa28f:-7f80">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="747" y="311"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7bff">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="support_id" remarks="" uid="2c333360:15ef2aaa28f:-7c37">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="organization_id" remarks="" uid="2c333360:15ef2aaa28f:-7c07">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_SUPPORTER" remarks="" uid="2c333360:15ef2aaa28f:-7f7e">
+<primary-key-description/>
+<primary-key-column name="pmcid"/>
+<primary-key-column name="support_id"/>
+<primary-key-column name="organization_id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_supporter_1" on-delete="" on-update="" referenced-key="PK_SUPPORT" referenced-table="support" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7c38">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="support_id" referenced-key-column-name="id"/>
+</foreign-key>
+<foreign-key alias="" name="FK_supporter_2" on-delete="" on-update="" referenced-key="PK_ORGANIZATION" referenced-table="organization" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7c08">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="organization_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="support" remarks="" uid="2c333360:15ef2aaa28f:-7f7d">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="936" y="226"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7c83">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="support" remarks="" uid="2c333360:15ef2aaa28f:-7c82">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_SUPPORT" remarks="" uid="2c333360:15ef2aaa28f:-7f7b">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="resource" remarks="" uid="2c333360:15ef2aaa28f:-7f7a">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="895" y="101"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="id" remarks="" uid="2c333360:15ef2aaa28f:-7cd0">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="resource" remarks="" uid="2c333360:15ef2aaa28f:-7ccf">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="umls_id" remarks="" uid="2c333360:15ef2aaa28f:-7cce">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="umls_match_string" remarks="" uid="2c333360:15ef2aaa28f:-7ccd">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="alt_umls_id" remarks="" uid="2c333360:15ef2aaa28f:-7ccc">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="alt_umls_match_string" remarks="" uid="2c333360:15ef2aaa28f:-7ccb">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_RESOURCE" remarks="" uid="2c333360:15ef2aaa28f:-7f78">
+<primary-key-description/>
+<primary-key-column name="id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list/>
+<index-list/>
+</table>
+<table alias="" name="organism_mention" remarks="" uid="2c333360:15ef2aaa28f:-7bf2">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="985" y="531"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="organism_id" remarks="" uid="2c333360:15ef2aaa28f:-7bd0">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7bc3">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_ORGANISM_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-7bf1">
+<primary-key-description/>
+<primary-key-column name="organism_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_24_1" on-delete="" on-update="" referenced-key="PK_ORGANISM" referenced-table="organism" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7bd1">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="organism_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="technique_mention" remarks="" uid="2c333360:15ef2aaa28f:-7bc2">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="1093" y="432"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="technique_id" remarks="" uid="2c333360:15ef2aaa28f:-7b85">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7b77">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_TECHNIQUE_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-7bc1">
+<primary-key-description/>
+<primary-key-column name="technique_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_25_1" on-delete="" on-update="" referenced-key="PK_TECHNIQUE" referenced-table="technique" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7b86">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="technique_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="support_mention" remarks="" uid="2c333360:15ef2aaa28f:-7b76">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="1133" y="296"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="support_id" remarks="" uid="2c333360:15ef2aaa28f:-7b42">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7b38">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_SUPPORT_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-7b75">
+<primary-key-description/>
+<primary-key-column name="support_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_26_1" on-delete="" on-update="" referenced-key="PK_SUPPORT" referenced-table="support" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7b43">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="support_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="resource_mention" remarks="" uid="2c333360:15ef2aaa28f:-7b37">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="1167" y="223"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="resource_id" remarks="" uid="2c333360:15ef2aaa28f:-7b17">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7a9e">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_RESOURCE_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-7b36">
+<primary-key-description/>
+<primary-key-column name="resource_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_27_1" on-delete="" on-update="" referenced-key="PK_RESOURCE" referenced-table="resource" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7b18">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="resource_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="location_mention" remarks="" uid="2c333360:15ef2aaa28f:-7a9d">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="1185" y="95"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="location_id" remarks="" uid="2c333360:15ef2aaa28f:-7a8a">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7a81">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_LOCATION_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-7a9c">
+<primary-key-description/>
+<primary-key-column name="location_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_28_1" on-delete="" on-update="" referenced-key="PK_LOCATION" referenced-table="location" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7a8b">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="location_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="disease_mention" remarks="" uid="2c333360:15ef2aaa28f:-7a80">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="654" y="-20"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="disease_id" remarks="" uid="2c333360:15ef2aaa28f:-7a55">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7a1b">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_DISEASE_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-7a7f">
+<primary-key-description/>
+<primary-key-column name="disease_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_29_1" on-delete="" on-update="" referenced-key="PK_DISEASE" referenced-table="disease" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7a56">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="disease_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="organic_chemical_mention" remarks="" uid="2c333360:15ef2aaa28f:-7a7e">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="771" y="-7"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="organic_chemical_id" remarks="" uid="2c333360:15ef2aaa28f:-7a2a">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7a18">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_ORGANIC_CHEMICAL_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-7a7d">
+<primary-key-description/>
+<primary-key-column name="organic_chemical_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_30_1" on-delete="" on-update="" referenced-key="PK_ORGANIC_CHEMICAL" referenced-table="organic_chemical" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7a2b">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="organic_chemical_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="collaboration_mention" remarks="" uid="2c333360:15ef2aaa28f:-7a17">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="131" y="238"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="collaboration_id" remarks="" uid="2c333360:15ef2aaa28f:-790c">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-78e3">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_COLLABORATION_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-7a16">
+<primary-key-description/>
+<primary-key-column name="collaboration_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_31_1" on-delete="" on-update="" referenced-key="PK_COLLABORATION" referenced-table="collaboration" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-790d">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="collaboration_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="award_mention" remarks="" uid="2c333360:15ef2aaa28f:-7a15">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="5" y="3"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="award_id" remarks="" uid="2c333360:15ef2aaa28f:-78f1">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-78e6">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_AWARD_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-7a14">
+<primary-key-description/>
+<primary-key-column name="award_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_32_1" on-delete="" on-update="" referenced-key="PK_AWARD" referenced-table="award" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-78f2">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="award_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="person_mention" remarks="" uid="2c333360:15ef2aaa28f:-7a13">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="489" y="408"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="person_id" remarks="" uid="2c333360:15ef2aaa28f:-79a7">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-78dd">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_PERSON_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-7a12">
+<primary-key-description/>
+<primary-key-column name="person_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_33_1" on-delete="" on-update="" referenced-key="PK_PERSON" referenced-table="person" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-79a8">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="person_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="organization_mention" remarks="" uid="2c333360:15ef2aaa28f:-7a11">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="583" y="164"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="organization_id" remarks="" uid="2c333360:15ef2aaa28f:-79d8">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-78e0">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_ORGANIZATION_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-7a10">
+<primary-key-description/>
+<primary-key-column name="organization_id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_34_1" on-delete="" on-update="" referenced-key="PK_ORGANIZATION" referenced-table="organization" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-79d9">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="organization_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="event_mention" remarks="" uid="2c333360:15ef2aaa28f:-78dc">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="117" y="581"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="event_id" remarks="" uid="2c333360:15ef2aaa28f:-789d">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="10" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-774f">
+<column-description/>
+<data-type jdbc-type="1" literal-prefix="'" literal-suffix="'" name="CHAR" selected-variant-pattern="CHAR(%n)">
+<variant precision-max="2147483647" precision-min="1" precision-variable="%n" type-name-pattern="CHAR(%n)"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_EVENT_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-78db">
+<primary-key-description/>
+<primary-key-column name="event_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_35_1" on-delete="" on-update="" referenced-key="PK_EVENT" referenced-table="event" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-789e">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="event_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="publication_component_mention" remarks="" uid="2c333360:15ef2aaa28f:-78da">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="255" y="582"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="publication_component_id" remarks="" uid="2c333360:15ef2aaa28f:-7873">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-774c">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_PUBLICATION_COMPONENT_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-78d9">
+<primary-key-description/>
+<primary-key-column name="publication_component_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_36_1" on-delete="" on-update="" referenced-key="PK_PUBLICATION_COMPONENT" referenced-table="publication_component" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7874">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="publication_component_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="discipline_mention" remarks="" uid="2c333360:15ef2aaa28f:-78d8">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="483" y="598"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="discipline_id" remarks="" uid="2c333360:15ef2aaa28f:-7834">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7749">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_DISCIPLINE_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-78d7">
+<primary-key-description/>
+<primary-key-column name="discipline_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_37_1" on-delete="" on-update="" referenced-key="PK_DISCIPLINE" referenced-table="discipline" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7835">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="discipline_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="project_mention" remarks="" uid="2c333360:15ef2aaa28f:-78d4">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="813" y="578"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="project_id" remarks="" uid="2c333360:15ef2aaa28f:-77f5">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7743">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_PROJECT_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-78d3">
+<primary-key-description/>
+<primary-key-column name="project_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_39_1" on-delete="" on-update="" referenced-key="PK_PROJECT" referenced-table="project" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-77f6">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="project_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="funding_agency_mention" remarks="" uid="2c333360:15ef2aaa28f:-77ba">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="647" y="589"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="funding_agency_id" remarks="" uid="2c333360:15ef2aaa28f:-777c">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7746">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_FUNDING_AGENCY_MENTION" remarks="" uid="2c333360:15ef2aaa28f:-77b9">
+<primary-key-description/>
+<primary-key-column name="funding_agency_id"/>
+<primary-key-column name="pmcid"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_40_1" on-delete="" on-update="" referenced-key="PK_FUNDING_AGENCY" referenced-table="funding_agency" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-777d">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="funding_agency_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="investigator" remarks="" uid="2c333360:15ef2aaa28f:-7638">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="409" y="265"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7634">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="person_id" remarks="" uid="2c333360:15ef2aaa28f:-7633">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="organization_id" remarks="" uid="2c333360:15ef2aaa28f:-7632">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_INVESTIGATOR" remarks="" uid="2c333360:15ef2aaa28f:-7637">
+<primary-key-description/>
+<primary-key-column name="pmcid"/>
+<primary-key-column name="person_id"/>
+<primary-key-column name="organization_id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_investigator_1" on-delete="" on-update="" referenced-key="PK_ORGANIZATION" referenced-table="organization" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7596">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="organization_id" referenced-key-column-name="id"/>
+</foreign-key>
+<foreign-key alias="" name="FK_investigator_2" on-delete="" on-update="" referenced-key="PK_PERSON" referenced-table="person" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7556">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="person_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="skill" remarks="" uid="2c333360:15ef2aaa28f:-74c6">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="663" y="379"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-7448">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="person_id" remarks="" uid="2c333360:15ef2aaa28f:-7489">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="technique_id" remarks="" uid="2c333360:15ef2aaa28f:-7453">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_SKILL" remarks="" uid="2c333360:15ef2aaa28f:-74c5">
+<primary-key-description/>
+<primary-key-column name="pmcid"/>
+<primary-key-column name="person_id"/>
+<primary-key-column name="technique_id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_TABLE_41_1" on-delete="" on-update="" referenced-key="PK_PERSON" referenced-table="person" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-748a">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="person_id" referenced-key-column-name="id"/>
+</foreign-key>
+<foreign-key alias="" name="FK_TABLE_41_2" on-delete="" on-update="" referenced-key="PK_TECHNIQUE" referenced-table="technique" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7454">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="technique_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+<table alias="" name="affiliation" remarks="" uid="2c333360:15ef2aaa28f:-7441">
+<table-description/>
+<table-figure-bounds height="-1" width="-1" x="568" y="295"/>
+<column-list>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-731e">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="person_id" remarks="" uid="2c333360:15ef2aaa28f:-738c">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="organization_id" remarks="" uid="2c333360:15ef2aaa28f:-734f">
+<column-description/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
+</data-type>
+</column>
+</column-list>
+<primary-key alias="" name="PK_AFFILIATION" remarks="" uid="2c333360:15ef2aaa28f:-7440">
+<primary-key-description/>
+<primary-key-column name="pmcid"/>
+<primary-key-column name="person_id"/>
+<primary-key-column name="organization_id"/>
+</primary-key>
+<unique-key-list/>
+<foreign-key-list>
+<foreign-key alias="" name="FK_affiliation_1" on-delete="" on-update="" referenced-key="PK_PERSON" referenced-table="person" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-738d">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="person_id" referenced-key-column-name="id"/>
+</foreign-key>
+<foreign-key alias="" name="FK_affiliation_2" on-delete="" on-update="" referenced-key="PK_ORGANIZATION" referenced-table="organization" referenced-table-schema="pubmed_central_ack_stanford" remarks="" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="" uid="2c333360:15ef2aaa28f:-7350">
+<foreign-key-description/>
+<foreign-key-figure>
+<fk-fig-bendpoint-list/>
+</foreign-key-figure>
+<foreign-key-column column-name="organization_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+<index-list/>
+</table>
+</table-list>
+</schema>
+</schema-list>
+</database-model>
+</clay-model>

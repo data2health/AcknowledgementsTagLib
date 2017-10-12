@@ -1,0 +1,5946 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	<tlib-version>2.1</tlib-version>
+	<short-name>simp</short-name>
+	<uri>http://icts.uiowa.edu/AcknowledgementsTagLib</uri>
+
+	<tag>
+		<name>getSequenceNumber</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.Sequence</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>dbtest</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.DBTest</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+
+	<tag>
+		<name>foreachAward</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.award.AwardIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>award</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.award.Award</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteAward</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.award.AwardDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>awardID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.award.AwardID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>awardAward</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.award.AwardAward</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>award</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachClinicalTrial</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrialIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>prefix</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>clinicalTrial</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrial</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>prefix</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteClinicalTrial</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrialDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>prefix</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>clinicalTrialPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrialPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>clinicalTrialPrefix</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrialPrefix</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>prefix</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>clinicalTrialID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrialID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachDiscipline</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.discipline.DisciplineIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>discipline</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.discipline.Discipline</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteDiscipline</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.discipline.DisciplineDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>disciplineID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.discipline.DisciplineID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>disciplineDiscipline</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.discipline.DisciplineDiscipline</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>discipline</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachCollaborant</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborant.CollaborantIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>collaborationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>useOrganization</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>useCollaboration</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+
+	<tag>
+		<name>collaborant</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborant.Collaborant</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>collaborationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteCollaborant</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborant.CollaborantDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>collaborationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>collaborantPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborant.CollaborantPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>collaborantOrganizationId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborant.CollaborantOrganizationId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>collaborantCollaborationId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborant.CollaborantCollaborationId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>collaborationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachDisease</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.disease.DiseaseIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>disease</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.disease.Disease</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteDisease</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.disease.DiseaseDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>diseaseID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.disease.DiseaseID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>diseaseDisease</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.disease.DiseaseDisease</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>disease</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>diseaseUmlsId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.disease.DiseaseUmlsId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>umlsId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>diseaseUmlsMatchString</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.disease.DiseaseUmlsMatchString</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>umlsMatchString</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachCollaborator</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborator.CollaboratorIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>collaborationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>useCollaboration</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>usePerson</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+
+	<tag>
+		<name>collaborator</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborator.Collaborator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>collaborationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteCollaborator</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborator.CollaboratorDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>collaborationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>collaboratorPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborator.CollaboratorPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>collaboratorCollaborationId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborator.CollaboratorCollaborationId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>collaborationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>collaboratorPersonId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborator.CollaboratorPersonId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachCollaboration</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaboration.CollaborationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>collaboration</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaboration.Collaboration</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteCollaboration</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaboration.CollaborationDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>collaborationID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaboration.CollaborationID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>collaborationCollaboration</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaboration.CollaborationCollaboration</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>collaboration</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachEvent</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.event.EventIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>event</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.event.Event</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteEvent</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.event.EventDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>eventID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.event.EventID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>eventEvent</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.event.EventEvent</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>event</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachFundingAgency</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.fundingAgency.FundingAgencyIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>fundingAgency</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.fundingAgency.FundingAgency</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteFundingAgency</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.fundingAgency.FundingAgencyDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>fundingAgencyID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.fundingAgency.FundingAgencyID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>fundingAgencyFundingAgency</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.fundingAgency.FundingAgencyFundingAgency</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>fundingAgency</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachFunder</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.funder.FunderIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>awardId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>useOrganization</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>useAward</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+
+	<tag>
+		<name>funder</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.funder.Funder</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>awardId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteFunder</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.funder.FunderDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>awardId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>funderPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.funder.FunderPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>funderOrganizationId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.funder.FunderOrganizationId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>funderAwardId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.funder.FunderAwardId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>awardId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachAwardee</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.awardee.AwardeeIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>awardId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>useAward</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>usePerson</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+
+	<tag>
+		<name>awardee</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.awardee.Awardee</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>awardId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteAwardee</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.awardee.AwardeeDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>awardId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>awardeePmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.awardee.AwardeePmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>awardeeAwardId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.awardee.AwardeeAwardId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>awardId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>awardeePersonId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.awardee.AwardeePersonId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachLocation</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.location.LocationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>location</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.location.Location</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteLocation</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.location.LocationDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>locationID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.location.LocationID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>locationLocation</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.location.LocationLocation</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>location</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>locationGeonamesId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.location.LocationGeonamesId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>geonamesId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>locationGeonamesMatchString</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.location.LocationGeonamesMatchString</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>geonamesMatchString</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachPublicationComponent</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.publicationComponent.PublicationComponentIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>publicationComponent</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.publicationComponent.PublicationComponent</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deletePublicationComponent</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.publicationComponent.PublicationComponentDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>publicationComponentID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.publicationComponent.PublicationComponentID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>publicationComponentPublicationComponent</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.publicationComponent.PublicationComponentPublicationComponent</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>publicationComponent</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachProvider</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.provider.ProviderIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>resourceId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>usePerson</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>useResource</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+
+	<tag>
+		<name>provider</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.provider.Provider</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>resourceId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteProvider</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.provider.ProviderDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>resourceId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>providerPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.provider.ProviderPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>providerPersonId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.provider.ProviderPersonId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>providerResourceId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.provider.ProviderResourceId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>resourceId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachProject</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.project.ProjectIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>project</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.project.Project</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteProject</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.project.ProjectDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>projectID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.project.ProjectID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>projectProject</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.project.ProjectProject</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>project</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachPerson</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.person.PersonIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>person</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.person.Person</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deletePerson</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.person.PersonDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>personID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.person.PersonID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>personFirstName</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.person.PersonFirstName</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>firstName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>personMiddleName</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.person.PersonMiddleName</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>middleName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>personLastName</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.person.PersonLastName</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>lastName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>personTitle</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.person.PersonTitle</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>title</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>personAppendix</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.person.PersonAppendix</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>appendix</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachOrganization</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organization.OrganizationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organization</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organization.Organization</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteOrganization</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organization.OrganizationDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organizationID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organization.OrganizationID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organizationOrganization</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organization.OrganizationOrganization</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>organization</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organizationGridId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organization.OrganizationGridId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>gridId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organizationGridMatchString</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organization.OrganizationGridMatchString</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>gridMatchString</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organizationGeonamesId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organization.OrganizationGeonamesId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>geonamesId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organizationGeonamesMatchString</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organization.OrganizationGeonamesMatchString</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>geonamesMatchString</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachOrganism</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organism.OrganismIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organism</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organism.Organism</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteOrganism</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organism.OrganismDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organismID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organism.OrganismID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organismOrganism</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organism.OrganismOrganism</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>organism</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organismUmlsId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organism.OrganismUmlsId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>umlsId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organismUmlsMatchString</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organism.OrganismUmlsMatchString</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>umlsMatchString</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachOrganicChemical</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemicalIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organicChemical</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemical</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteOrganicChemical</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemicalDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organicChemicalID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemicalID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organicChemicalOrganicChemical</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemicalOrganicChemical</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>organicChemical</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organicChemicalUmlsId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemicalUmlsId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>umlsId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organicChemicalUmlsMatchString</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemicalUmlsMatchString</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>umlsMatchString</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachTechnique</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.technique.TechniqueIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>technique</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.technique.Technique</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteTechnique</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.technique.TechniqueDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>techniqueID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.technique.TechniqueID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>techniqueTechnique</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.technique.TechniqueTechnique</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>technique</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>techniqueUmlsId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.technique.TechniqueUmlsId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>umlsId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>techniqueUmlsMatchString</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.technique.TechniqueUmlsMatchString</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>umlsMatchString</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSupporter</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.supporter.SupporterIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>supportId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>useSupport</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>useOrganization</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+
+	<tag>
+		<name>supporter</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.supporter.Supporter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>supportId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteSupporter</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.supporter.SupporterDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>supportId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>supporterPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.supporter.SupporterPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>supporterSupportId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.supporter.SupporterSupportId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>supportId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>supporterOrganizationId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.supporter.SupporterOrganizationId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSupport</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.support.SupportIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>support</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.support.Support</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteSupport</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.support.SupportDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>supportID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.support.SupportID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>supportSupport</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.support.SupportSupport</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>support</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachResource</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resource.ResourceIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>resource</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resource.Resource</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteResource</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resource.ResourceDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>resourceID</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resource.ResourceID</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>ID</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>resourceResource</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resource.ResourceResource</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>resource</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>resourceUmlsId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resource.ResourceUmlsId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>umlsId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>resourceUmlsMatchString</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resource.ResourceUmlsMatchString</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>umlsMatchString</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>resourceAltUmlsId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resource.ResourceAltUmlsId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>altUmlsId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>resourceAltUmlsMatchString</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resource.ResourceAltUmlsMatchString</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>altUmlsMatchString</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachOrganismMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organismMention.OrganismMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organismId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organismMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organismMention.OrganismMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>organismId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteOrganismMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organismMention.OrganismMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>organismId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organismMentionOrganismId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organismMention.OrganismMentionOrganismId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>organismId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organismMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organismMention.OrganismMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachTechniqueMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.techniqueMention.TechniqueMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>techniqueId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>techniqueMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.techniqueMention.TechniqueMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>techniqueId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteTechniqueMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.techniqueMention.TechniqueMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>techniqueId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>techniqueMentionTechniqueId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.techniqueMention.TechniqueMentionTechniqueId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>techniqueId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>techniqueMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.techniqueMention.TechniqueMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSupportMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.supportMention.SupportMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>supportId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>supportMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.supportMention.SupportMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>supportId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteSupportMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.supportMention.SupportMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>supportId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>supportMentionSupportId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.supportMention.SupportMentionSupportId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>supportId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>supportMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.supportMention.SupportMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachResourceMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resourceMention.ResourceMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>resourceId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>resourceMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resourceMention.ResourceMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>resourceId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteResourceMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resourceMention.ResourceMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>resourceId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>resourceMentionResourceId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resourceMention.ResourceMentionResourceId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>resourceId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>resourceMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.resourceMention.ResourceMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachLocationMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.locationMention.LocationMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>locationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>locationMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.locationMention.LocationMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>locationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteLocationMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.locationMention.LocationMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>locationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>locationMentionLocationId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.locationMention.LocationMentionLocationId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>locationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>locationMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.locationMention.LocationMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachDiseaseMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.diseaseMention.DiseaseMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>diseaseId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>diseaseMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.diseaseMention.DiseaseMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>diseaseId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteDiseaseMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.diseaseMention.DiseaseMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>diseaseId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>diseaseMentionDiseaseId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.diseaseMention.DiseaseMentionDiseaseId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>diseaseId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>diseaseMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.diseaseMention.DiseaseMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachOrganicChemicalMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organicChemicalMention.OrganicChemicalMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organicChemicalId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organicChemicalMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organicChemicalMention.OrganicChemicalMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>organicChemicalId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteOrganicChemicalMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organicChemicalMention.OrganicChemicalMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>organicChemicalId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organicChemicalMentionOrganicChemicalId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organicChemicalMention.OrganicChemicalMentionOrganicChemicalId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>organicChemicalId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organicChemicalMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organicChemicalMention.OrganicChemicalMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachCollaborationMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborationMention.CollaborationMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>collaborationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>collaborationMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborationMention.CollaborationMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>collaborationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteCollaborationMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborationMention.CollaborationMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>collaborationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>collaborationMentionCollaborationId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborationMention.CollaborationMentionCollaborationId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>collaborationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>collaborationMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.collaborationMention.CollaborationMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachAwardMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.awardMention.AwardMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>awardId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>awardMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.awardMention.AwardMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>awardId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteAwardMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.awardMention.AwardMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>awardId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>awardMentionAwardId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.awardMention.AwardMentionAwardId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>awardId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>awardMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.awardMention.AwardMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachPersonMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.personMention.PersonMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>personMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.personMention.PersonMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deletePersonMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.personMention.PersonMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>personMentionPersonId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.personMention.PersonMentionPersonId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>personMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.personMention.PersonMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachOrganizationMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organizationMention.OrganizationMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organizationMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organizationMention.OrganizationMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteOrganizationMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organizationMention.OrganizationMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organizationMentionOrganizationId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organizationMention.OrganizationMentionOrganizationId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>organizationMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.organizationMention.OrganizationMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachEventMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.eventMention.EventMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>eventId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>eventMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.eventMention.EventMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>eventId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteEventMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.eventMention.EventMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>eventId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>eventMentionEventId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.eventMention.EventMentionEventId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>eventId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>eventMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.eventMention.EventMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachPublicationComponentMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.publicationComponentMention.PublicationComponentMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>publicationComponentId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>publicationComponentMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.publicationComponentMention.PublicationComponentMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>publicationComponentId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deletePublicationComponentMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.publicationComponentMention.PublicationComponentMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>publicationComponentId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>publicationComponentMentionPublicationComponentId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.publicationComponentMention.PublicationComponentMentionPublicationComponentId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>publicationComponentId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>publicationComponentMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.publicationComponentMention.PublicationComponentMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachDisciplineMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.disciplineMention.DisciplineMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>disciplineId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>disciplineMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.disciplineMention.DisciplineMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>disciplineId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteDisciplineMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.disciplineMention.DisciplineMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>disciplineId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>disciplineMentionDisciplineId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.disciplineMention.DisciplineMentionDisciplineId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>disciplineId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>disciplineMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.disciplineMention.DisciplineMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachProjectMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.projectMention.ProjectMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>projectId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>projectMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.projectMention.ProjectMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>projectId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteProjectMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.projectMention.ProjectMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>projectId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>projectMentionProjectId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.projectMention.ProjectMentionProjectId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>projectId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>projectMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.projectMention.ProjectMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachFundingAgencyMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.fundingAgencyMention.FundingAgencyMentionIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>fundingAgencyId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>fundingAgencyMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.fundingAgencyMention.FundingAgencyMention</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>fundingAgencyId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteFundingAgencyMention</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.fundingAgencyMention.FundingAgencyMentionDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>fundingAgencyId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>fundingAgencyMentionFundingAgencyId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.fundingAgencyMention.FundingAgencyMentionFundingAgencyId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>fundingAgencyId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>fundingAgencyMentionPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.fundingAgencyMention.FundingAgencyMentionPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachInvestigator</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.investigator.InvestigatorIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>useOrganization</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>usePerson</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+
+	<tag>
+		<name>investigator</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.investigator.Investigator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteInvestigator</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.investigator.InvestigatorDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>investigatorPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.investigator.InvestigatorPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>investigatorPersonId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.investigator.InvestigatorPersonId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>investigatorOrganizationId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.investigator.InvestigatorOrganizationId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachSkill</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.skill.SkillIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>techniqueId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>usePerson</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>useTechnique</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+
+	<tag>
+		<name>skill</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.skill.Skill</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>techniqueId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteSkill</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.skill.SkillDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>techniqueId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>skillPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.skill.SkillPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>skillPersonId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.skill.SkillPersonId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>skillTechniqueId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.skill.SkillTechniqueId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>techniqueId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>foreachAffiliation</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.affiliation.AffiliationIterator</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>sortCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>limitCriteria</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>usePerson</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>useOrganization</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+
+	<tag>
+		<name>affiliation</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.affiliation.Affiliation</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>deleteAffiliation</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.affiliation.AffiliationDeleter</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>affiliationPmcid</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.affiliation.AffiliationPmcid</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>pmcid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>affiliationPersonId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.affiliation.AffiliationPersonId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>personId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>affiliationOrganizationId</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.affiliation.AffiliationOrganizationId</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>organizationId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<function>
+		<name>awardCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.award.AwardIterator</function-class>
+		<function-signature>java.lang.String awardCount()</function-signature>
+	</function>
+
+	<function>
+		<name>awardExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.award.AwardIterator</function-class>
+		<function-signature>java.lang.String awardExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>awardIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.award.Award</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>awardAwardValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.award.Award</function-class>
+		<function-signature>java.lang.String awardValue()</function-signature>
+	</function>
+
+	<function>
+		<name>clinicalTrialCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrialIterator</function-class>
+		<function-signature>java.lang.String clinicalTrialCount()</function-signature>
+	</function>
+
+	<function>
+		<name>clinicalTrialExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrialIterator</function-class>
+		<function-signature>java.lang.String clinicalTrialExists(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>clinicalTrialPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrial</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>clinicalTrialPrefixValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrial</function-class>
+		<function-signature>java.lang.String prefixValue()</function-signature>
+	</function>
+
+	<function>
+		<name>clinicalTrialIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrial</function-class>
+		<function-signature>java.lang.String IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>disciplineCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.discipline.DisciplineIterator</function-class>
+		<function-signature>java.lang.String disciplineCount()</function-signature>
+	</function>
+
+	<function>
+		<name>disciplineExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.discipline.DisciplineIterator</function-class>
+		<function-signature>java.lang.String disciplineExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>disciplineIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.discipline.Discipline</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>disciplineDisciplineValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.discipline.Discipline</function-class>
+		<function-signature>java.lang.String disciplineValue()</function-signature>
+	</function>
+
+	<function>
+		<name>collaborantExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborant.CollaborantIterator</function-class>
+		<function-signature>java.lang.String collaborantExists(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaborantCountByOrganization</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborant.CollaborantIterator</function-class>
+		<function-signature>java.lang.String collaborantCountByOrganization(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organizationHasCollaborant</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborant.CollaborantIterator</function-class>
+		<function-signature>java.lang.Boolean organizationHasCollaborant(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaborantCountByCollaboration</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborant.CollaborantIterator</function-class>
+		<function-signature>java.lang.String collaborantCountByCollaboration(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaborationHasCollaborant</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborant.CollaborantIterator</function-class>
+		<function-signature>java.lang.Boolean collaborationHasCollaborant(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organizationCollaborationExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborant.CollaborantIterator</function-class>
+		<function-signature>java.lang.Boolean organizationCollaborationExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaborantPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborant.Collaborant</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>collaborantOrganizationIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborant.Collaborant</function-class>
+		<function-signature>java.lang.Integer organizationIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>collaborantCollaborationIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborant.Collaborant</function-class>
+		<function-signature>java.lang.Integer collaborationIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>diseaseCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.disease.DiseaseIterator</function-class>
+		<function-signature>java.lang.String diseaseCount()</function-signature>
+	</function>
+
+	<function>
+		<name>diseaseExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.disease.DiseaseIterator</function-class>
+		<function-signature>java.lang.String diseaseExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>diseaseIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.disease.Disease</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>diseaseDiseaseValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.disease.Disease</function-class>
+		<function-signature>java.lang.String diseaseValue()</function-signature>
+	</function>
+
+	<function>
+		<name>diseaseUmlsIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.disease.Disease</function-class>
+		<function-signature>java.lang.String umlsIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>diseaseUmlsMatchStringValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.disease.Disease</function-class>
+		<function-signature>java.lang.String umlsMatchStringValue()</function-signature>
+	</function>
+
+	<function>
+		<name>collaboratorExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborator.CollaboratorIterator</function-class>
+		<function-signature>java.lang.String collaboratorExists(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaboratorCountByCollaboration</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborator.CollaboratorIterator</function-class>
+		<function-signature>java.lang.String collaboratorCountByCollaboration(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaborationHasCollaborator</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborator.CollaboratorIterator</function-class>
+		<function-signature>java.lang.Boolean collaborationHasCollaborator(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaboratorCountByPerson</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborator.CollaboratorIterator</function-class>
+		<function-signature>java.lang.String collaboratorCountByPerson(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personHasCollaborator</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborator.CollaboratorIterator</function-class>
+		<function-signature>java.lang.Boolean personHasCollaborator(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaborationPersonExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborator.CollaboratorIterator</function-class>
+		<function-signature>java.lang.Boolean collaborationPersonExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaboratorPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborator.Collaborator</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>collaboratorCollaborationIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborator.Collaborator</function-class>
+		<function-signature>java.lang.Integer collaborationIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>collaboratorPersonIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborator.Collaborator</function-class>
+		<function-signature>java.lang.Integer personIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>collaborationCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaboration.CollaborationIterator</function-class>
+		<function-signature>java.lang.String collaborationCount()</function-signature>
+	</function>
+
+	<function>
+		<name>collaborationExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaboration.CollaborationIterator</function-class>
+		<function-signature>java.lang.String collaborationExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaborationIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaboration.Collaboration</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>collaborationCollaborationValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaboration.Collaboration</function-class>
+		<function-signature>java.lang.String collaborationValue()</function-signature>
+	</function>
+
+	<function>
+		<name>eventCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.event.EventIterator</function-class>
+		<function-signature>java.lang.String eventCount()</function-signature>
+	</function>
+
+	<function>
+		<name>eventExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.event.EventIterator</function-class>
+		<function-signature>java.lang.String eventExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>eventIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.event.Event</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>eventEventValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.event.Event</function-class>
+		<function-signature>java.lang.String eventValue()</function-signature>
+	</function>
+
+	<function>
+		<name>fundingAgencyCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.fundingAgency.FundingAgencyIterator</function-class>
+		<function-signature>java.lang.String fundingAgencyCount()</function-signature>
+	</function>
+
+	<function>
+		<name>fundingAgencyExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.fundingAgency.FundingAgencyIterator</function-class>
+		<function-signature>java.lang.String fundingAgencyExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>fundingAgencyIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.fundingAgency.FundingAgency</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>fundingAgencyFundingAgencyValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.fundingAgency.FundingAgency</function-class>
+		<function-signature>java.lang.String fundingAgencyValue()</function-signature>
+	</function>
+
+	<function>
+		<name>funderExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.funder.FunderIterator</function-class>
+		<function-signature>java.lang.String funderExists(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>funderCountByOrganization</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.funder.FunderIterator</function-class>
+		<function-signature>java.lang.String funderCountByOrganization(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organizationHasFunder</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.funder.FunderIterator</function-class>
+		<function-signature>java.lang.Boolean organizationHasFunder(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>funderCountByAward</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.funder.FunderIterator</function-class>
+		<function-signature>java.lang.String funderCountByAward(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>awardHasFunder</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.funder.FunderIterator</function-class>
+		<function-signature>java.lang.Boolean awardHasFunder(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organizationAwardExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.funder.FunderIterator</function-class>
+		<function-signature>java.lang.Boolean organizationAwardExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>funderPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.funder.Funder</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>funderOrganizationIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.funder.Funder</function-class>
+		<function-signature>java.lang.Integer organizationIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>funderAwardIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.funder.Funder</function-class>
+		<function-signature>java.lang.Integer awardIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>awardeeExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardee.AwardeeIterator</function-class>
+		<function-signature>java.lang.String awardeeExists(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>awardeeCountByAward</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardee.AwardeeIterator</function-class>
+		<function-signature>java.lang.String awardeeCountByAward(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>awardHasAwardee</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardee.AwardeeIterator</function-class>
+		<function-signature>java.lang.Boolean awardHasAwardee(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>awardeeCountByPerson</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardee.AwardeeIterator</function-class>
+		<function-signature>java.lang.String awardeeCountByPerson(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personHasAwardee</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardee.AwardeeIterator</function-class>
+		<function-signature>java.lang.Boolean personHasAwardee(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>awardPersonExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardee.AwardeeIterator</function-class>
+		<function-signature>java.lang.Boolean awardPersonExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>awardeePmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardee.Awardee</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>awardeeAwardIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardee.Awardee</function-class>
+		<function-signature>java.lang.Integer awardIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>awardeePersonIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardee.Awardee</function-class>
+		<function-signature>java.lang.Integer personIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>locationCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.location.LocationIterator</function-class>
+		<function-signature>java.lang.String locationCount()</function-signature>
+	</function>
+
+	<function>
+		<name>locationExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.location.LocationIterator</function-class>
+		<function-signature>java.lang.String locationExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>locationIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.location.Location</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>locationLocationValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.location.Location</function-class>
+		<function-signature>java.lang.String locationValue()</function-signature>
+	</function>
+
+	<function>
+		<name>locationGeonamesIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.location.Location</function-class>
+		<function-signature>java.lang.Integer geonamesIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>locationGeonamesMatchStringValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.location.Location</function-class>
+		<function-signature>java.lang.String geonamesMatchStringValue()</function-signature>
+	</function>
+
+	<function>
+		<name>publicationComponentCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.publicationComponent.PublicationComponentIterator</function-class>
+		<function-signature>java.lang.String publicationComponentCount()</function-signature>
+	</function>
+
+	<function>
+		<name>publicationComponentExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.publicationComponent.PublicationComponentIterator</function-class>
+		<function-signature>java.lang.String publicationComponentExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>publicationComponentIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.publicationComponent.PublicationComponent</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>publicationComponentPublicationComponentValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.publicationComponent.PublicationComponent</function-class>
+		<function-signature>java.lang.String publicationComponentValue()</function-signature>
+	</function>
+
+	<function>
+		<name>providerExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.provider.ProviderIterator</function-class>
+		<function-signature>java.lang.String providerExists(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>providerCountByPerson</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.provider.ProviderIterator</function-class>
+		<function-signature>java.lang.String providerCountByPerson(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personHasProvider</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.provider.ProviderIterator</function-class>
+		<function-signature>java.lang.Boolean personHasProvider(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>providerCountByResource</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.provider.ProviderIterator</function-class>
+		<function-signature>java.lang.String providerCountByResource(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>resourceHasProvider</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.provider.ProviderIterator</function-class>
+		<function-signature>java.lang.Boolean resourceHasProvider(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personResourceExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.provider.ProviderIterator</function-class>
+		<function-signature>java.lang.Boolean personResourceExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>providerPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.provider.Provider</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>providerPersonIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.provider.Provider</function-class>
+		<function-signature>java.lang.Integer personIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>providerResourceIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.provider.Provider</function-class>
+		<function-signature>java.lang.Integer resourceIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>projectCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.project.ProjectIterator</function-class>
+		<function-signature>java.lang.String projectCount()</function-signature>
+	</function>
+
+	<function>
+		<name>projectExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.project.ProjectIterator</function-class>
+		<function-signature>java.lang.String projectExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>projectIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.project.Project</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>projectProjectValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.project.Project</function-class>
+		<function-signature>java.lang.String projectValue()</function-signature>
+	</function>
+
+	<function>
+		<name>personCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.person.PersonIterator</function-class>
+		<function-signature>java.lang.String personCount()</function-signature>
+	</function>
+
+	<function>
+		<name>personExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.person.PersonIterator</function-class>
+		<function-signature>java.lang.String personExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.person.Person</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>personFirstNameValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.person.Person</function-class>
+		<function-signature>java.lang.String firstNameValue()</function-signature>
+	</function>
+
+	<function>
+		<name>personMiddleNameValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.person.Person</function-class>
+		<function-signature>java.lang.String middleNameValue()</function-signature>
+	</function>
+
+	<function>
+		<name>personLastNameValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.person.Person</function-class>
+		<function-signature>java.lang.String lastNameValue()</function-signature>
+	</function>
+
+	<function>
+		<name>personTitleValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.person.Person</function-class>
+		<function-signature>java.lang.String titleValue()</function-signature>
+	</function>
+
+	<function>
+		<name>personAppendixValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.person.Person</function-class>
+		<function-signature>java.lang.String appendixValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organizationCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organization.OrganizationIterator</function-class>
+		<function-signature>java.lang.String organizationCount()</function-signature>
+	</function>
+
+	<function>
+		<name>organizationExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organization.OrganizationIterator</function-class>
+		<function-signature>java.lang.String organizationExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organizationIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organization.Organization</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organizationOrganizationValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organization.Organization</function-class>
+		<function-signature>java.lang.String organizationValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organizationGridIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organization.Organization</function-class>
+		<function-signature>java.lang.String gridIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organizationGridMatchStringValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organization.Organization</function-class>
+		<function-signature>java.lang.String gridMatchStringValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organizationGeonamesIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organization.Organization</function-class>
+		<function-signature>java.lang.Integer geonamesIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organizationGeonamesMatchStringValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organization.Organization</function-class>
+		<function-signature>java.lang.String geonamesMatchStringValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organismCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organism.OrganismIterator</function-class>
+		<function-signature>java.lang.String organismCount()</function-signature>
+	</function>
+
+	<function>
+		<name>organismExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organism.OrganismIterator</function-class>
+		<function-signature>java.lang.String organismExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organismIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organism.Organism</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organismOrganismValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organism.Organism</function-class>
+		<function-signature>java.lang.String organismValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organismUmlsIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organism.Organism</function-class>
+		<function-signature>java.lang.String umlsIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organismUmlsMatchStringValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organism.Organism</function-class>
+		<function-signature>java.lang.String umlsMatchStringValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organicChemicalCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemicalIterator</function-class>
+		<function-signature>java.lang.String organicChemicalCount()</function-signature>
+	</function>
+
+	<function>
+		<name>organicChemicalExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemicalIterator</function-class>
+		<function-signature>java.lang.String organicChemicalExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organicChemicalIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemical</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organicChemicalOrganicChemicalValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemical</function-class>
+		<function-signature>java.lang.String organicChemicalValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organicChemicalUmlsIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemical</function-class>
+		<function-signature>java.lang.String umlsIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organicChemicalUmlsMatchStringValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organicChemical.OrganicChemical</function-class>
+		<function-signature>java.lang.String umlsMatchStringValue()</function-signature>
+	</function>
+
+	<function>
+		<name>techniqueCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.technique.TechniqueIterator</function-class>
+		<function-signature>java.lang.String techniqueCount()</function-signature>
+	</function>
+
+	<function>
+		<name>techniqueExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.technique.TechniqueIterator</function-class>
+		<function-signature>java.lang.String techniqueExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>techniqueIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.technique.Technique</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>techniqueTechniqueValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.technique.Technique</function-class>
+		<function-signature>java.lang.String techniqueValue()</function-signature>
+	</function>
+
+	<function>
+		<name>techniqueUmlsIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.technique.Technique</function-class>
+		<function-signature>java.lang.String umlsIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>techniqueUmlsMatchStringValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.technique.Technique</function-class>
+		<function-signature>java.lang.String umlsMatchStringValue()</function-signature>
+	</function>
+
+	<function>
+		<name>supporterExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supporter.SupporterIterator</function-class>
+		<function-signature>java.lang.String supporterExists(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>supporterCountBySupport</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supporter.SupporterIterator</function-class>
+		<function-signature>java.lang.String supporterCountBySupport(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>supportHasSupporter</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supporter.SupporterIterator</function-class>
+		<function-signature>java.lang.Boolean supportHasSupporter(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>supporterCountByOrganization</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supporter.SupporterIterator</function-class>
+		<function-signature>java.lang.String supporterCountByOrganization(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organizationHasSupporter</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supporter.SupporterIterator</function-class>
+		<function-signature>java.lang.Boolean organizationHasSupporter(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>supportOrganizationExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supporter.SupporterIterator</function-class>
+		<function-signature>java.lang.Boolean supportOrganizationExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>supporterPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supporter.Supporter</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>supporterSupportIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supporter.Supporter</function-class>
+		<function-signature>java.lang.Integer supportIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>supporterOrganizationIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supporter.Supporter</function-class>
+		<function-signature>java.lang.Integer organizationIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>supportCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.support.SupportIterator</function-class>
+		<function-signature>java.lang.String supportCount()</function-signature>
+	</function>
+
+	<function>
+		<name>supportExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.support.SupportIterator</function-class>
+		<function-signature>java.lang.String supportExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>supportIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.support.Support</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>supportSupportValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.support.Support</function-class>
+		<function-signature>java.lang.String supportValue()</function-signature>
+	</function>
+
+	<function>
+		<name>resourceCount</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resource.ResourceIterator</function-class>
+		<function-signature>java.lang.String resourceCount()</function-signature>
+	</function>
+
+	<function>
+		<name>resourceExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resource.ResourceIterator</function-class>
+		<function-signature>java.lang.String resourceExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>resourceIDValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resource.Resource</function-class>
+		<function-signature>java.lang.Integer IDValue()</function-signature>
+	</function>
+
+	<function>
+		<name>resourceResourceValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resource.Resource</function-class>
+		<function-signature>java.lang.String resourceValue()</function-signature>
+	</function>
+
+	<function>
+		<name>resourceUmlsIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resource.Resource</function-class>
+		<function-signature>java.lang.String umlsIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>resourceUmlsMatchStringValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resource.Resource</function-class>
+		<function-signature>java.lang.String umlsMatchStringValue()</function-signature>
+	</function>
+
+	<function>
+		<name>resourceAltUmlsIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resource.Resource</function-class>
+		<function-signature>java.lang.String altUmlsIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>resourceAltUmlsMatchStringValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resource.Resource</function-class>
+		<function-signature>java.lang.String altUmlsMatchStringValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organismMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organismMention.OrganismMentionIterator</function-class>
+		<function-signature>java.lang.String organismMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organismMentionCountByOrganism</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organismMention.OrganismMentionIterator</function-class>
+		<function-signature>java.lang.String organismMentionCountByOrganism(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organismHasOrganismMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organismMention.OrganismMentionIterator</function-class>
+		<function-signature>java.lang.Boolean organismHasOrganismMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organismMentionOrganismIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organismMention.OrganismMention</function-class>
+		<function-signature>java.lang.Integer organismIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organismMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organismMention.OrganismMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>techniqueMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.techniqueMention.TechniqueMentionIterator</function-class>
+		<function-signature>java.lang.String techniqueMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>techniqueMentionCountByTechnique</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.techniqueMention.TechniqueMentionIterator</function-class>
+		<function-signature>java.lang.String techniqueMentionCountByTechnique(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>techniqueHasTechniqueMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.techniqueMention.TechniqueMentionIterator</function-class>
+		<function-signature>java.lang.Boolean techniqueHasTechniqueMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>techniqueMentionTechniqueIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.techniqueMention.TechniqueMention</function-class>
+		<function-signature>java.lang.Integer techniqueIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>techniqueMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.techniqueMention.TechniqueMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>supportMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supportMention.SupportMentionIterator</function-class>
+		<function-signature>java.lang.String supportMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>supportMentionCountBySupport</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supportMention.SupportMentionIterator</function-class>
+		<function-signature>java.lang.String supportMentionCountBySupport(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>supportHasSupportMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supportMention.SupportMentionIterator</function-class>
+		<function-signature>java.lang.Boolean supportHasSupportMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>supportMentionSupportIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supportMention.SupportMention</function-class>
+		<function-signature>java.lang.Integer supportIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>supportMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.supportMention.SupportMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>resourceMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resourceMention.ResourceMentionIterator</function-class>
+		<function-signature>java.lang.String resourceMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>resourceMentionCountByResource</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resourceMention.ResourceMentionIterator</function-class>
+		<function-signature>java.lang.String resourceMentionCountByResource(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>resourceHasResourceMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resourceMention.ResourceMentionIterator</function-class>
+		<function-signature>java.lang.Boolean resourceHasResourceMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>resourceMentionResourceIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resourceMention.ResourceMention</function-class>
+		<function-signature>java.lang.Integer resourceIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>resourceMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.resourceMention.ResourceMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>locationMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.locationMention.LocationMentionIterator</function-class>
+		<function-signature>java.lang.String locationMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>locationMentionCountByLocation</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.locationMention.LocationMentionIterator</function-class>
+		<function-signature>java.lang.String locationMentionCountByLocation(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>locationHasLocationMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.locationMention.LocationMentionIterator</function-class>
+		<function-signature>java.lang.Boolean locationHasLocationMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>locationMentionLocationIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.locationMention.LocationMention</function-class>
+		<function-signature>java.lang.Integer locationIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>locationMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.locationMention.LocationMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>diseaseMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.diseaseMention.DiseaseMentionIterator</function-class>
+		<function-signature>java.lang.String diseaseMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>diseaseMentionCountByDisease</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.diseaseMention.DiseaseMentionIterator</function-class>
+		<function-signature>java.lang.String diseaseMentionCountByDisease(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>diseaseHasDiseaseMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.diseaseMention.DiseaseMentionIterator</function-class>
+		<function-signature>java.lang.Boolean diseaseHasDiseaseMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>diseaseMentionDiseaseIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.diseaseMention.DiseaseMention</function-class>
+		<function-signature>java.lang.Integer diseaseIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>diseaseMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.diseaseMention.DiseaseMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organicChemicalMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organicChemicalMention.OrganicChemicalMentionIterator</function-class>
+		<function-signature>java.lang.String organicChemicalMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organicChemicalMentionCountByOrganicChemical</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organicChemicalMention.OrganicChemicalMentionIterator</function-class>
+		<function-signature>java.lang.String organicChemicalMentionCountByOrganicChemical(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organicChemicalHasOrganicChemicalMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organicChemicalMention.OrganicChemicalMentionIterator</function-class>
+		<function-signature>java.lang.Boolean organicChemicalHasOrganicChemicalMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organicChemicalMentionOrganicChemicalIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organicChemicalMention.OrganicChemicalMention</function-class>
+		<function-signature>java.lang.Integer organicChemicalIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organicChemicalMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organicChemicalMention.OrganicChemicalMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>collaborationMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborationMention.CollaborationMentionIterator</function-class>
+		<function-signature>java.lang.String collaborationMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaborationMentionCountByCollaboration</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborationMention.CollaborationMentionIterator</function-class>
+		<function-signature>java.lang.String collaborationMentionCountByCollaboration(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaborationHasCollaborationMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborationMention.CollaborationMentionIterator</function-class>
+		<function-signature>java.lang.Boolean collaborationHasCollaborationMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>collaborationMentionCollaborationIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborationMention.CollaborationMention</function-class>
+		<function-signature>java.lang.Integer collaborationIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>collaborationMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.collaborationMention.CollaborationMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>awardMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardMention.AwardMentionIterator</function-class>
+		<function-signature>java.lang.String awardMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>awardMentionCountByAward</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardMention.AwardMentionIterator</function-class>
+		<function-signature>java.lang.String awardMentionCountByAward(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>awardHasAwardMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardMention.AwardMentionIterator</function-class>
+		<function-signature>java.lang.Boolean awardHasAwardMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>awardMentionAwardIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardMention.AwardMention</function-class>
+		<function-signature>java.lang.Integer awardIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>awardMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.awardMention.AwardMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>personMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.personMention.PersonMentionIterator</function-class>
+		<function-signature>java.lang.String personMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personMentionCountByPerson</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.personMention.PersonMentionIterator</function-class>
+		<function-signature>java.lang.String personMentionCountByPerson(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personHasPersonMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.personMention.PersonMentionIterator</function-class>
+		<function-signature>java.lang.Boolean personHasPersonMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personMentionPersonIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.personMention.PersonMention</function-class>
+		<function-signature>java.lang.Integer personIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>personMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.personMention.PersonMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organizationMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organizationMention.OrganizationMentionIterator</function-class>
+		<function-signature>java.lang.String organizationMentionExists(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organizationMentionCountByOrganization</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organizationMention.OrganizationMentionIterator</function-class>
+		<function-signature>java.lang.String organizationMentionCountByOrganization(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organizationHasOrganizationMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organizationMention.OrganizationMentionIterator</function-class>
+		<function-signature>java.lang.Boolean organizationHasOrganizationMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organizationMentionOrganizationIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organizationMention.OrganizationMention</function-class>
+		<function-signature>java.lang.Integer organizationIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>organizationMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.organizationMention.OrganizationMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>eventMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.eventMention.EventMentionIterator</function-class>
+		<function-signature>java.lang.String eventMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>eventMentionCountByEvent</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.eventMention.EventMentionIterator</function-class>
+		<function-signature>java.lang.String eventMentionCountByEvent(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>eventHasEventMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.eventMention.EventMentionIterator</function-class>
+		<function-signature>java.lang.Boolean eventHasEventMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>eventMentionEventIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.eventMention.EventMention</function-class>
+		<function-signature>java.lang.Integer eventIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>eventMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.eventMention.EventMention</function-class>
+		<function-signature>java.lang.String pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>publicationComponentMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.publicationComponentMention.PublicationComponentMentionIterator</function-class>
+		<function-signature>java.lang.String publicationComponentMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>publicationComponentMentionCountByPublicationComponent</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.publicationComponentMention.PublicationComponentMentionIterator</function-class>
+		<function-signature>java.lang.String publicationComponentMentionCountByPublicationComponent(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>publicationComponentHasPublicationComponentMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.publicationComponentMention.PublicationComponentMentionIterator</function-class>
+		<function-signature>java.lang.Boolean publicationComponentHasPublicationComponentMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>publicationComponentMentionPublicationComponentIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.publicationComponentMention.PublicationComponentMention</function-class>
+		<function-signature>java.lang.Integer publicationComponentIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>publicationComponentMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.publicationComponentMention.PublicationComponentMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>disciplineMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.disciplineMention.DisciplineMentionIterator</function-class>
+		<function-signature>java.lang.String disciplineMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>disciplineMentionCountByDiscipline</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.disciplineMention.DisciplineMentionIterator</function-class>
+		<function-signature>java.lang.String disciplineMentionCountByDiscipline(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>disciplineHasDisciplineMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.disciplineMention.DisciplineMentionIterator</function-class>
+		<function-signature>java.lang.Boolean disciplineHasDisciplineMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>disciplineMentionDisciplineIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.disciplineMention.DisciplineMention</function-class>
+		<function-signature>java.lang.Integer disciplineIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>disciplineMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.disciplineMention.DisciplineMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>projectMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.projectMention.ProjectMentionIterator</function-class>
+		<function-signature>java.lang.String projectMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>projectMentionCountByProject</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.projectMention.ProjectMentionIterator</function-class>
+		<function-signature>java.lang.String projectMentionCountByProject(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>projectHasProjectMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.projectMention.ProjectMentionIterator</function-class>
+		<function-signature>java.lang.Boolean projectHasProjectMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>projectMentionProjectIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.projectMention.ProjectMention</function-class>
+		<function-signature>java.lang.Integer projectIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>projectMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.projectMention.ProjectMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>fundingAgencyMentionExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.fundingAgencyMention.FundingAgencyMentionIterator</function-class>
+		<function-signature>java.lang.String fundingAgencyMentionExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>fundingAgencyMentionCountByFundingAgency</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.fundingAgencyMention.FundingAgencyMentionIterator</function-class>
+		<function-signature>java.lang.String fundingAgencyMentionCountByFundingAgency(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>fundingAgencyHasFundingAgencyMention</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.fundingAgencyMention.FundingAgencyMentionIterator</function-class>
+		<function-signature>java.lang.Boolean fundingAgencyHasFundingAgencyMention(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>fundingAgencyMentionFundingAgencyIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.fundingAgencyMention.FundingAgencyMention</function-class>
+		<function-signature>java.lang.Integer fundingAgencyIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>fundingAgencyMentionPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.fundingAgencyMention.FundingAgencyMention</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>investigatorExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.investigator.InvestigatorIterator</function-class>
+		<function-signature>java.lang.String investigatorExists(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>investigatorCountByOrganization</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.investigator.InvestigatorIterator</function-class>
+		<function-signature>java.lang.String investigatorCountByOrganization(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organizationHasInvestigator</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.investigator.InvestigatorIterator</function-class>
+		<function-signature>java.lang.Boolean organizationHasInvestigator(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>investigatorCountByPerson</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.investigator.InvestigatorIterator</function-class>
+		<function-signature>java.lang.String investigatorCountByPerson(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personHasInvestigator</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.investigator.InvestigatorIterator</function-class>
+		<function-signature>java.lang.Boolean personHasInvestigator(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organizationPersonExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.investigator.InvestigatorIterator</function-class>
+		<function-signature>java.lang.Boolean organizationPersonExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>investigatorPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.investigator.Investigator</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>investigatorPersonIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.investigator.Investigator</function-class>
+		<function-signature>java.lang.Integer personIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>investigatorOrganizationIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.investigator.Investigator</function-class>
+		<function-signature>java.lang.Integer organizationIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>skillExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.skill.SkillIterator</function-class>
+		<function-signature>java.lang.String skillExists(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>skillCountByPerson</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.skill.SkillIterator</function-class>
+		<function-signature>java.lang.String skillCountByPerson(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personHasSkill</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.skill.SkillIterator</function-class>
+		<function-signature>java.lang.Boolean personHasSkill(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>skillCountByTechnique</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.skill.SkillIterator</function-class>
+		<function-signature>java.lang.String skillCountByTechnique(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>techniqueHasSkill</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.skill.SkillIterator</function-class>
+		<function-signature>java.lang.Boolean techniqueHasSkill(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personTechniqueExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.skill.SkillIterator</function-class>
+		<function-signature>java.lang.Boolean personTechniqueExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>skillPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.skill.Skill</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>skillPersonIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.skill.Skill</function-class>
+		<function-signature>java.lang.Integer personIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>skillTechniqueIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.skill.Skill</function-class>
+		<function-signature>java.lang.Integer techniqueIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>affiliationExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.affiliation.AffiliationIterator</function-class>
+		<function-signature>java.lang.String affiliationExists(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>affiliationCountByPerson</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.affiliation.AffiliationIterator</function-class>
+		<function-signature>java.lang.String affiliationCountByPerson(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personHasAffiliation</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.affiliation.AffiliationIterator</function-class>
+		<function-signature>java.lang.Boolean personHasAffiliation(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>affiliationCountByOrganization</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.affiliation.AffiliationIterator</function-class>
+		<function-signature>java.lang.String affiliationCountByOrganization(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>organizationHasAffiliation</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.affiliation.AffiliationIterator</function-class>
+		<function-signature>java.lang.Boolean organizationHasAffiliation(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>personOrganizationExists</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.affiliation.AffiliationIterator</function-class>
+		<function-signature>java.lang.Boolean personOrganizationExists(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>affiliationPmcidValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.affiliation.Affiliation</function-class>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
+	</function>
+
+	<function>
+		<name>affiliationPersonIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.affiliation.Affiliation</function-class>
+		<function-signature>java.lang.Integer personIdValue()</function-signature>
+	</function>
+
+	<function>
+		<name>affiliationOrganizationIdValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.affiliation.Affiliation</function-class>
+		<function-signature>java.lang.Integer organizationIdValue()</function-signature>
+	</function>
+</taglib>
