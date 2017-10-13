@@ -41,7 +41,7 @@ public class ProviderIterator extends AcknowledgementsTagLibBodyTagSupport {
 		ProviderIterator theIterator = new ProviderIterator();
 		try {
 			PreparedStatement stat = theIterator.getConnection().prepareStatement("SELECT count(*) from pubmed_central_ack_stanford.provider where 1=1"
-						+ " and id = ?"
+						+ " and person_id = ?"
 						);
 
 			stat.setInt(1,Integer.parseInt(ID));
@@ -69,7 +69,7 @@ public class ProviderIterator extends AcknowledgementsTagLibBodyTagSupport {
 		ProviderIterator theIterator = new ProviderIterator();
 		try {
 			PreparedStatement stat = theIterator.getConnection().prepareStatement("SELECT count(*) from pubmed_central_ack_stanford.provider where 1=1"
-						+ " and id = ?"
+						+ " and resource_id = ?"
 						);
 
 			stat.setInt(1,Integer.parseInt(ID));

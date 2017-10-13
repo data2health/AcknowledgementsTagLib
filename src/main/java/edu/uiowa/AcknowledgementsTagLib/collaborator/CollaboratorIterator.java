@@ -41,7 +41,7 @@ public class CollaboratorIterator extends AcknowledgementsTagLibBodyTagSupport {
 		CollaboratorIterator theIterator = new CollaboratorIterator();
 		try {
 			PreparedStatement stat = theIterator.getConnection().prepareStatement("SELECT count(*) from pubmed_central_ack_stanford.collaborator where 1=1"
-						+ " and id = ?"
+						+ " and collaboration_id = ?"
 						);
 
 			stat.setInt(1,Integer.parseInt(ID));
@@ -69,7 +69,7 @@ public class CollaboratorIterator extends AcknowledgementsTagLibBodyTagSupport {
 		CollaboratorIterator theIterator = new CollaboratorIterator();
 		try {
 			PreparedStatement stat = theIterator.getConnection().prepareStatement("SELECT count(*) from pubmed_central_ack_stanford.collaborator where 1=1"
-						+ " and id = ?"
+						+ " and person_id = ?"
 						);
 
 			stat.setInt(1,Integer.parseInt(ID));

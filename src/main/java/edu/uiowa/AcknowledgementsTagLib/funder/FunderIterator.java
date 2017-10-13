@@ -41,7 +41,7 @@ public class FunderIterator extends AcknowledgementsTagLibBodyTagSupport {
 		FunderIterator theIterator = new FunderIterator();
 		try {
 			PreparedStatement stat = theIterator.getConnection().prepareStatement("SELECT count(*) from pubmed_central_ack_stanford.funder where 1=1"
-						+ " and id = ?"
+						+ " and organization_id = ?"
 						);
 
 			stat.setInt(1,Integer.parseInt(ID));
@@ -69,7 +69,7 @@ public class FunderIterator extends AcknowledgementsTagLibBodyTagSupport {
 		FunderIterator theIterator = new FunderIterator();
 		try {
 			PreparedStatement stat = theIterator.getConnection().prepareStatement("SELECT count(*) from pubmed_central_ack_stanford.funder where 1=1"
-						+ " and id = ?"
+						+ " and award_id = ?"
 						);
 
 			stat.setInt(1,Integer.parseInt(ID));
