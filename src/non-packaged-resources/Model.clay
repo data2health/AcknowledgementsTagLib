@@ -1243,10 +1243,10 @@
 <variant type-name-pattern="INT"/>
 </data-type>
 </column>
-<column alias="" auto-increment="false" column-size="10" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-774f">
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="true" name="pmcid" remarks="" uid="2c333360:15ef2aaa28f:-774f">
 <column-description/>
-<data-type jdbc-type="1" literal-prefix="'" literal-suffix="'" name="CHAR" selected-variant-pattern="CHAR(%n)">
-<variant precision-max="2147483647" precision-min="1" precision-variable="%n" type-name-pattern="CHAR(%n)"/>
+<data-type jdbc-type="4" name="INT" selected-variant-pattern="INT">
+<variant type-name-pattern="INT"/>
 </data-type>
 </column>
 </column-list>
