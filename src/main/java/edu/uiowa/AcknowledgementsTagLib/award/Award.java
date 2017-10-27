@@ -27,6 +27,7 @@ public class Award extends AcknowledgementsTagLibTagSupport {
 
 	int ID = 0;
 	String award = null;
+	String agency = null;
 
 	public int doStartTag() throws JspException {
 		currentInstance = this;
@@ -46,12 +47,14 @@ public class Award extends AcknowledgementsTagLibTagSupport {
 			} else {
 				// an iterator or ID was provided as an attribute - we need to load a Award from the database
 				boolean found = false;
-				PreparedStatement stmt = getConnection().prepareStatement("select award from pubmed_central_ack_stanford.award where id = ?");
+				PreparedStatement stmt = getConnection().prepareStatement("select award,agency from pubmed_central_ack_stanford.award where id = ?");
 				stmt.setInt(1,ID);
 				ResultSet rs = stmt.executeQuery();
 				while (rs.next()) {
 					if (award == null)
 						award = rs.getString(1);
+					if (agency == null)
+						agency = rs.getString(2);
 					found = true;
 				}
 				stmt.close();
@@ -73,9 +76,10 @@ public class Award extends AcknowledgementsTagLibTagSupport {
 		currentInstance = null;
 		try {
 			if (commitNeeded) {
-				PreparedStatement stmt = getConnection().prepareStatement("update pubmed_central_ack_stanford.award set award = ? where id = ?");
+				PreparedStatement stmt = getConnection().prepareStatement("update pubmed_central_ack_stanford.award set award = ?, agency = ? where id = ?");
 				stmt.setString(1,award);
-				stmt.setInt(2,ID);
+				stmt.setString(2,agency);
+				stmt.setInt(3,ID);
 				stmt.executeUpdate();
 				stmt.close();
 			}
@@ -98,9 +102,12 @@ public class Award extends AcknowledgementsTagLibTagSupport {
 
 			if (award == null)
 				award = "";
-			PreparedStatement stmt = getConnection().prepareStatement("insert into pubmed_central_ack_stanford.award(id,award) values (?,?)");
+			if (agency == null)
+				agency = "";
+			PreparedStatement stmt = getConnection().prepareStatement("insert into pubmed_central_ack_stanford.award(id,award,agency) values (?,?,?)");
 			stmt.setInt(1,ID);
 			stmt.setString(2,award);
+			stmt.setString(3,agency);
 			stmt.executeUpdate();
 			stmt.close();
 		} catch (SQLException e) {
@@ -139,6 +146,22 @@ public class Award extends AcknowledgementsTagLibTagSupport {
 		return award;
 	}
 
+	public String getAgency () {
+		if (commitNeeded)
+			return "";
+		else
+			return agency;
+	}
+
+	public void setAgency (String agency) {
+		this.agency = agency;
+		commitNeeded = true;
+	}
+
+	public String getActualAgency () {
+		return agency;
+	}
+
 	public static Integer IDValue() throws JspException {
 		try {
 			return currentInstance.getID();
@@ -155,9 +178,18 @@ public class Award extends AcknowledgementsTagLibTagSupport {
 		}
 	}
 
+	public static String agencyValue() throws JspException {
+		try {
+			return currentInstance.getAgency();
+		} catch (Exception e) {
+			 throw new JspTagException("Error in tag function agencyValue()");
+		}
+	}
+
 	private void clearServiceState () {
 		ID = 0;
 		award = null;
+		agency = null;
 		newRecord = false;
 		commitNeeded = false;
 		parentEntities = new Vector<AcknowledgementsTagLibTagSupport>();

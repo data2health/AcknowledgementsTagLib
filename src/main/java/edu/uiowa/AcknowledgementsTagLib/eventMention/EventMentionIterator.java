@@ -18,7 +18,7 @@ import edu.uiowa.AcknowledgementsTagLib.event.Event;
 @SuppressWarnings("serial")
 public class EventMentionIterator extends AcknowledgementsTagLibBodyTagSupport {
     int eventId = 0;
-    String pmcid = null;
+    int pmcid = 0;
 	Vector<AcknowledgementsTagLibTagSupport> parentEntities = new Vector<AcknowledgementsTagLibTagSupport>();
 
 	private static final Log log = LogFactory.getLog(EventMentionIterator.class);
@@ -69,7 +69,7 @@ public class EventMentionIterator extends AcknowledgementsTagLibBodyTagSupport {
 						);
 
 			stat.setInt(1,Integer.parseInt(eventId));
-			stat.setString(2,pmcid);
+			stat.setInt(2,Integer.parseInt(pmcid));
 			ResultSet crs = stat.executeQuery();
 
 			if (crs.next()) {
@@ -122,7 +122,7 @@ public class EventMentionIterator extends AcknowledgementsTagLibBodyTagSupport {
 
             if (rs.next()) {
                 eventId = rs.getInt(1);
-                pmcid = rs.getString(2);
+                pmcid = rs.getInt(2);
                 pageContext.setAttribute(var, ++rsCount);
                 return EVAL_BODY_INCLUDE;
             }
@@ -166,7 +166,7 @@ public class EventMentionIterator extends AcknowledgementsTagLibBodyTagSupport {
         try {
             if (rs.next()) {
                 eventId = rs.getInt(1);
-                pmcid = rs.getString(2);
+                pmcid = rs.getInt(2);
                 pageContext.setAttribute(var, ++rsCount);
                 return EVAL_BODY_AGAIN;
             }
@@ -195,7 +195,7 @@ public class EventMentionIterator extends AcknowledgementsTagLibBodyTagSupport {
 
     private void clearServiceState() {
         eventId = 0;
-        pmcid = null;
+        pmcid = 0;
         parentEntities = new Vector<AcknowledgementsTagLibTagSupport>();
 
         this.rs = null;
@@ -243,15 +243,15 @@ public class EventMentionIterator extends AcknowledgementsTagLibBodyTagSupport {
 		return eventId;
 	}
 
-	public String getPmcid () {
+	public int getPmcid () {
 		return pmcid;
 	}
 
-	public void setPmcid (String pmcid) {
+	public void setPmcid (int pmcid) {
 		this.pmcid = pmcid;
 	}
 
-	public String getActualPmcid () {
+	public int getActualPmcid () {
 		return pmcid;
 	}
 }

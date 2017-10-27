@@ -25,7 +25,7 @@ public class EventMentionPmcid extends AcknowledgementsTagLibTagSupport {
 		return SKIP_BODY;
 	}
 
-	public String getPmcid() throws JspTagException {
+	public int getPmcid() throws JspTagException {
 		try {
 			EventMention theEventMention = (EventMention)findAncestorWithClass(this, EventMention.class);
 			return theEventMention.getPmcid();
@@ -35,7 +35,7 @@ public class EventMentionPmcid extends AcknowledgementsTagLibTagSupport {
 		}
 	}
 
-	public void setPmcid(String pmcid) throws JspTagException {
+	public void setPmcid(int pmcid) throws JspTagException {
 		try {
 			EventMention theEventMention = (EventMention)findAncestorWithClass(this, EventMention.class);
 			theEventMention.setPmcid(pmcid);

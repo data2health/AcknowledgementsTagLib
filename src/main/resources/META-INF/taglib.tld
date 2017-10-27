@@ -104,6 +104,18 @@
 	</tag>
 
 	<tag>
+		<name>awardAgency</name>
+		<tag-class>edu.uiowa.AcknowledgementsTagLib.award.AwardAgency</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>agency</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
 		<name>foreachClinicalTrial</name>
 		<tag-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrialIterator</tag-class>
 		<body-content>JSP</body-content>
@@ -4457,6 +4469,12 @@
 	</function>
 
 	<function>
+		<name>awardAgencyValue</name>
+		<function-class>edu.uiowa.AcknowledgementsTagLib.award.Award</function-class>
+		<function-signature>java.lang.String agencyValue()</function-signature>
+	</function>
+
+	<function>
 		<name>clinicalTrialCount</name>
 		<function-class>edu.uiowa.AcknowledgementsTagLib.clinicalTrial.ClinicalTrialIterator</function-class>
 		<function-signature>java.lang.String clinicalTrialCount()</function-signature>
@@ -5659,7 +5677,7 @@
 	<function>
 		<name>eventMentionPmcidValue</name>
 		<function-class>edu.uiowa.AcknowledgementsTagLib.eventMention.EventMention</function-class>
-		<function-signature>java.lang.String pmcidValue()</function-signature>
+		<function-signature>java.lang.Integer pmcidValue()</function-signature>
 	</function>
 
 	<function>

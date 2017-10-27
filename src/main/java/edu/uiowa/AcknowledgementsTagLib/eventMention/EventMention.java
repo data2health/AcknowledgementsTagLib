@@ -27,7 +27,7 @@ public class EventMention extends AcknowledgementsTagLibTagSupport {
 	Vector<AcknowledgementsTagLibTagSupport> parentEntities = new Vector<AcknowledgementsTagLibTagSupport>();
 
 	int eventId = 0;
-	String pmcid = null;
+	int pmcid = 0;
 
 	public int doStartTag() throws JspException {
 		currentInstance = this;
@@ -57,7 +57,7 @@ public class EventMention extends AcknowledgementsTagLibTagSupport {
 				boolean found = false;
 				PreparedStatement stmt = getConnection().prepareStatement("select 1 from pubmed_central_ack_stanford.event_mention where event_id = ? and pmcid = ?");
 				stmt.setInt(1,eventId);
-				stmt.setString(2,pmcid);
+				stmt.setInt(2,pmcid);
 				ResultSet rs = stmt.executeQuery();
 				while (rs.next()) {
 					found = true;
@@ -83,7 +83,7 @@ public class EventMention extends AcknowledgementsTagLibTagSupport {
 			if (commitNeeded) {
 				PreparedStatement stmt = getConnection().prepareStatement("update pubmed_central_ack_stanford.event_mention set where event_id = ? and pmcid = ?");
 				stmt.setInt(1,eventId);
-				stmt.setString(2,pmcid);
+				stmt.setInt(2,pmcid);
 				stmt.executeUpdate();
 				stmt.close();
 			}
@@ -104,9 +104,14 @@ public class EventMention extends AcknowledgementsTagLibTagSupport {
 				log.debug("generating new EventMention " + eventId);
 			}
 
+			if (pmcid == 0) {
+				pmcid = Sequence.generateID();
+				log.debug("generating new EventMention " + pmcid);
+			}
+
 			PreparedStatement stmt = getConnection().prepareStatement("insert into pubmed_central_ack_stanford.event_mention(event_id,pmcid) values (?,?)");
 			stmt.setInt(1,eventId);
-			stmt.setString(2,pmcid);
+			stmt.setInt(2,pmcid);
 			stmt.executeUpdate();
 			stmt.close();
 		} catch (SQLException e) {
@@ -129,18 +134,15 @@ public class EventMention extends AcknowledgementsTagLibTagSupport {
 		return eventId;
 	}
 
-	public String getPmcid () {
-		if (commitNeeded)
-			return "";
-		else
-			return pmcid;
+	public int getPmcid () {
+		return pmcid;
 	}
 
-	public void setPmcid (String pmcid) {
+	public void setPmcid (int pmcid) {
 		this.pmcid = pmcid;
 	}
 
-	public String getActualPmcid () {
+	public int getActualPmcid () {
 		return pmcid;
 	}
 
@@ -152,7 +154,7 @@ public class EventMention extends AcknowledgementsTagLibTagSupport {
 		}
 	}
 
-	public static String pmcidValue() throws JspException {
+	public static Integer pmcidValue() throws JspException {
 		try {
 			return currentInstance.getPmcid();
 		} catch (Exception e) {
@@ -162,7 +164,7 @@ public class EventMention extends AcknowledgementsTagLibTagSupport {
 
 	private void clearServiceState () {
 		eventId = 0;
-		pmcid = null;
+		pmcid = 0;
 		newRecord = false;
 		commitNeeded = false;
 		parentEntities = new Vector<AcknowledgementsTagLibTagSupport>();

@@ -19,6 +19,7 @@ src/main/java/edu/uiowa/AcknowledgementsTagLib/affiliation/AffiliationOrganizati
 src/main/java/edu/uiowa/AcknowledgementsTagLib/affiliation/AffiliationPersonId.java -text
 src/main/java/edu/uiowa/AcknowledgementsTagLib/affiliation/AffiliationPmcid.java -text
 src/main/java/edu/uiowa/AcknowledgementsTagLib/award/Award.java -text
+src/main/java/edu/uiowa/AcknowledgementsTagLib/award/AwardAgency.java -text
 src/main/java/edu/uiowa/AcknowledgementsTagLib/award/AwardAward.java -text
 src/main/java/edu/uiowa/AcknowledgementsTagLib/award/AwardDeleter.java -text
 src/main/java/edu/uiowa/AcknowledgementsTagLib/award/AwardID.java -text

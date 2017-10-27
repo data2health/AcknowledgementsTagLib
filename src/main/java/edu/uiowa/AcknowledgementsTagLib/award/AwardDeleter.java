@@ -18,6 +18,7 @@ import edu.uiowa.AcknowledgementsTagLib.AcknowledgementsTagLibBodyTagSupport;
 public class AwardDeleter extends AcknowledgementsTagLibBodyTagSupport {
     int ID = 0;
     String award = null;
+    String agency = null;
 	Vector<AcknowledgementsTagLibTagSupport> parentEntities = new Vector<AcknowledgementsTagLibTagSupport>();
 
 	private static final Log log = LogFactory.getLog(AwardDeleter.class);

@@ -23,6 +23,12 @@
 <variant type-name-pattern="TEXT"/>
 </data-type>
 </column>
+<column alias="" auto-increment="false" column-size="0" decimal-digits="0" default-value="" mandatory="false" name="agency" remarks="" uid="67ebf27a:15f5d5641da:-7fd4">
+<column-description/>
+<data-type jdbc-type="-1" literal-prefix="'" literal-suffix="'" name="TEXT" selected-variant-pattern="TEXT">
+<variant type-name-pattern="TEXT"/>
+</data-type>
+</column>
 </column-list>
 <primary-key alias="" name="PK_AWARD" remarks="" uid="2c333360:15ef2aaa28f:-7ffd">
 <primary-key-description/>
