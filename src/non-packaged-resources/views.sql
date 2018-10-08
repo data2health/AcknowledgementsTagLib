@@ -71,3 +71,41 @@ union
     select distinct pmcid,'technique_mention' from technique_mention
     ) as foo
 group by 1 order by 2 desc;
+
+create materialized view person_by_total_relationship as
+select person_id,sum(count)
+from (
+    select person_id,count(*) from affiliation group by 1
+union
+    select person_id,count(*) from awardee group by 1
+union
+    select person_id,count(*) from collaborator group by 1
+union
+    select person_id,count(*) from investigator group by 1
+union
+    select person_id,count(*) from provider group by 1
+union
+    select person_id,count(*) from person_mention group by 1
+union
+    select person_id,count(*) from skill group by 1
+    ) as foo
+group by 1;
+create index ptrid on person_by_total_relationship (person_id);
+
+create materialized view person_by_distinct_relationship as
+select person_id,count(count)
+from (
+    select person_id,count(*) from affiliation group by 1
+union
+    select person_id,count(*) from awardee group by 1
+union
+    select person_id,count(*) from collaborator group by 1
+union
+    select person_id,count(*) from investigator group by 1
+union
+    select person_id,count(*) from provider group by 1
+union
+    select person_id,count(*) from skill group by 1
+    ) as foo
+group by 1;
+create index pdrid on person_by_distinct_relationship (person_id);
