@@ -257,6 +257,8 @@ src/main/java/edu/uiowa/AcknowledgementsTagLib/techniqueMention/TechniqueMention
 src/main/java/edu/uiowa/AcknowledgementsTagLib/techniqueMention/TechniqueMentionTechniqueId.java -text
 src/main/resources/META-INF/taglib.tld -text
 src/non-packaged-resources/Model.clay -text
+src/non-packaged-resources/aclknowledgements.owl -text svneol=unset#application/xml
+src/non-packaged-resources/catalog-v001.xml -text svneol=unset#application/xml
 src/non-packaged-resources/model.sql -text
 src/non-packaged-resources/views.sql -text
 src/test/java/edu/uiowa/AcknowledgementsTagLib/README.txt -text
